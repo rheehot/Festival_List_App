@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InformationActivity"
+    android:background="#EF8AAD" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="축제 주요 내용"
+            android:textColor="#000000"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/go_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="돌아가기" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/content_Scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="○ 크리스마스 콘서트\n○ 크리스마스 거리가게(마켓, 체험부스)운영\n○ 개막식 및 오프닝 축하공연\n○ 키즈존, 포토존 등 이벤트 운영"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="후기"
+            android:textColor="#000000"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/write_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="글쓰기" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/Bulletin_Board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
