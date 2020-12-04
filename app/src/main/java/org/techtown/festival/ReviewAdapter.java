@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+// 리사이클러뷰 어뎁터 코드
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
 
     private String[] re_name = {"김영한", "이수영", };
