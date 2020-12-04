@@ -22,3 +22,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+subprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
