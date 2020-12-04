@@ -24,5 +24,7 @@
         <item>경남</item>
         <item>제주</item>
     </string-array>
+
+    <string name="kakao_app_key">c24be7ae1ececd0178fd2ad80777dccd</string>
 </resources>
 
