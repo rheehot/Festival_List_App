@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 // 세부 정보 코드
 public class ReviewActivity extends AppCompatActivity {
@@ -17,17 +18,21 @@ public class ReviewActivity extends AppCompatActivity {
     public RecyclerView.LayoutManager layoutManager; //  변수와 레이아웃을 연결하는 매니저 변수 선언
     private RecyclerView.Adapter adapter; // 어뎁터 선언
 
+    public static final int REQUEST_CODE_MENU = 102;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
 
+        final Intent intent = getIntent();
+        final String userid = intent.getStringExtra("USERID");
+
         // main으로 돌아가는 부분
-        Button button = findViewById(R.id.go_main2);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button btn_main = findViewById(R.id.go_main2);
+        btn_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
                 setResult(RESULT_OK, intent);
                 finish();
             }
