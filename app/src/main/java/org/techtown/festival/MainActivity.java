@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 로그인 인텐트 부분(코드 병합하고 MainActivity로 옮겨주기)
         Intent intent = getIntent();
-        String id = intent.getStringExtra("name"); // id가져오기
+        final String id = intent.getStringExtra("ID"); // id가져오기
         Toast.makeText(getApplicationContext(), id+" 로그인 성공!", Toast.LENGTH_SHORT).show();
 
         // 마이페이지로 이동 인텐트
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
+                intent.putExtra("USERID", ""+id); // ID 보내주기
                 startActivityForResult(intent, REQUEST_CODE_MENU);
             }
         });

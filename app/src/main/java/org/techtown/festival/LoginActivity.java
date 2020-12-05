@@ -46,7 +46,7 @@ public class LoginActivity extends Activity {
                 public void onSuccess(MeV2Response result) {
                     // Intent intent = new Intent(getApplicationContext(), InformationActivity.class); // 나중에 병합하고 MainActivity로 수정
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    intent.putExtra("name", result.getId());
+                    intent.putExtra("ID", ""+result.getId());
                     startActivity(intent);
                     finish();
                 }

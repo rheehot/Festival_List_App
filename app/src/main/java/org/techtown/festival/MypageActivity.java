@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kakao.auth.ApiErrorCode;
@@ -17,21 +18,30 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MypageActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
+
+        final Intent intent = getIntent();
+        String userid = intent.getStringExtra("USERID");
+
+        //유저 ID 나타내는 부분
+        TextView ID = findViewById(R.id.ID);
+        ID.setText(userid);
 
         // main으로 돌아가는 부분
         Button button = findViewById(R.id.go_main);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
                 setResult(RESULT_OK, intent);
                 finish();
             }
         });
+
+
 
         // 로그아웃, 연결 해제 부분
         Button Logout = findViewById(R.id.mypage_Logout);
