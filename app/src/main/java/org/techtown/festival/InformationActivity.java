@@ -20,12 +20,6 @@ public class InformationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
 
-        // 로그인 인텐트 부분(코드 병합하고 MainActivity로 옮겨주기)
-        Intent intent = getIntent();
-        String id = intent.getStringExtra("name"); // id가져오기
-        Toast.makeText(getApplicationContext(), id+" 로그인 성공!", Toast.LENGTH_SHORT).show();
-
-
         // 리사이클러뷰, 어뎁터 부분
         review_list = findViewById(R.id.review_view);
         review_list.setHasFixedSize(true); // 크기를 가변적으로 바꿔줌줌

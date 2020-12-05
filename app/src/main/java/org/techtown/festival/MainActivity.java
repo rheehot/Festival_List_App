@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -28,11 +30,27 @@ public class MainActivity extends AppCompatActivity {
     RecyclerTextAdapter mAdapter = null ;
     ArrayList<RecyclerItem> mList = new ArrayList<RecyclerItem>();
 
+    public static final int REQUEST_CODE_MENU = 101;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 로그인 인텐트 부분(코드 병합하고 MainActivity로 옮겨주기)
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("name"); // id가져오기
+        Toast.makeText(getApplicationContext(), id+" 로그인 성공!", Toast.LENGTH_SHORT).show();
+
+        // 마이페이지로 이동 인텐트
+        Button btn_page = findViewById(R.id.go_mypage);
+        btn_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
+                startActivityForResult(intent, REQUEST_CODE_MENU);
+            }
+        });
 
         //스피너 part
         Spinner spinner = (Spinner)findViewById(R.id.spinner_rg);

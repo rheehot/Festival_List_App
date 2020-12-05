@@ -22,6 +22,18 @@ public class MypageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
 
+        // main으로 돌아가는 부분
+        Button button = findViewById(R.id.go_main);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
+
+        // 로그아웃, 연결 해제 부분
         Button Logout = findViewById(R.id.mypage_Logout);
         Button Signout = findViewById(R.id.mypage_Signout);
 
