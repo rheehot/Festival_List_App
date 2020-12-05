@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -17,11 +18,11 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
+/*
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
-
+*/
 public class MainActivity extends AppCompatActivity {
     RecyclerView mRecyclerView = null ;
     RecyclerTextAdapter mAdapter = null ;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //스피너 part
         Spinner spinner = (Spinner)findViewById(R.id.spinner_rg);

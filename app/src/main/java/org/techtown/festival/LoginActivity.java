@@ -27,24 +27,25 @@ public class LoginActivity extends Activity {
             UserManagement.getInstance().me(new MeV2ResponseCallback() {
                 @Override
                 public void onFailure(ErrorResult errorResult) {
-                    int result = errorResult.getErrorCode();
+                    int error = errorResult.getErrorCode();
 
-                    if (result == ApiErrorCode.CLIENT_ERROR_CODE) {
-                        Toast.makeText(getApplicationContext(), "네트워크 연결이 불안정합니다. 다시 시도해 주세요.", Toast.LENGTH_SHORT).show();
+                    if (error == ApiErrorCode.CLIENT_ERROR_CODE) {
+                        Toast.makeText(getApplicationContext(), "에러: "+error+"\n네트워크 연결이 불안정합니다.", Toast.LENGTH_SHORT).show();
                         finish();
                     } else {
-                        Toast.makeText(getApplicationContext(), "로그인 도중 오류가 발생했습니다: " + errorResult.getErrorMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "에러: "+errorResult.getErrorMessage()+"\n로그인 오류가 발생했습니다: ", Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onSessionClosed(ErrorResult errorResult) {
-                    Toast.makeText(getApplicationContext(), "세션이 닫혔습니다. 다시 시도해 주세요: " + errorResult.getErrorMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "에러: "+errorResult.getErrorMessage()+"\n세션이 닫혔습니다.", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onSuccess(MeV2Response result) {
-                    Intent intent = new Intent(getApplicationContext(), InformationActivity.class); // 나중에 병합하고 MainActivity로 수정
+                    // Intent intent = new Intent(getApplicationContext(), InformationActivity.class); // 나중에 병합하고 MainActivity로 수정
+                    Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
                     intent.putExtra("name", result.getId());
                     startActivity(intent);
                     finish();
@@ -54,7 +55,7 @@ public class LoginActivity extends Activity {
 
         @Override
         public void onSessionOpenFailed(KakaoException exception) { // 로그인 세션이 정상적으로 작동하지 않을 경우
-            Toast.makeText(getApplicationContext(), "로그인 도중 오류가 발생했습니다. 인터넷 연결을 확인해주세요: "+exception.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "에러: "+exception.toString()+"\n로그인 도중 오류가 발생했습니다. ", Toast.LENGTH_SHORT).show();
         }
     };
 
