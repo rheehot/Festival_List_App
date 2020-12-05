@@ -47,9 +47,20 @@ public class MainActivity extends AppCompatActivity {
         btn_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
-                intent.putExtra("USERID", ""+id); // ID 보내주기
-                startActivityForResult(intent, REQUEST_CODE_MENU);
+                Intent page_intent = new Intent(getApplicationContext(), MypageActivity.class);
+                page_intent.putExtra("USERID", ""+id); // ID 보내주기
+                startActivityForResult(page_intent, REQUEST_CODE_MENU);
+            }
+        });
+
+        //후기 게시판으로 이동 인텐트
+        Button btn_review = findViewById(R.id.go_review);
+        btn_review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent review_intent = new Intent(getApplicationContext(), ReviewActivity.class);
+                review_intent.putExtra("USERID", ""+id); // ID 보내주기
+                startActivityForResult(review_intent, REQUEST_CODE_MENU);
             }
         });
 
