@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "272320044234",
+    "project_id": "festival-list-app",
+    "storage_bucket": "festival-list-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272320044234:android:a1fc3f1bc15e14b5142833",
+        "android_client_info": {
+          "package_name": "org.techtown.festival"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272320044234-456ap2ok4p5a8ffqfr5i8igoi76t6ucc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.techtown.festival",
+            "certificate_hash": "57181aa622647b3a4032bdfcdff530b3a4ea4ac0"
+          }
+        },
+        {
+          "client_id": "272320044234-f3483i2cftr4du2caeaiippl0eu36thh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALCzgarXHkACvH0QTkMj8SUClNEP68A14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272320044234-f3483i2cftr4du2caeaiippl0eu36thh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
