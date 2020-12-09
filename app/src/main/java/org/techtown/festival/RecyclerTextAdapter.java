@@ -16,7 +16,7 @@ public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapte
     private ArrayList<RecyclerItem> mData = null ;
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
-    RecyclerTextAdapter(ArrayList<RecyclerItem> list) {
+    public RecyclerTextAdapter(ArrayList<RecyclerItem> list) {
         mData = list ;
     }
 
