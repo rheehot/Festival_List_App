@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         // database를 이용해 리사이클러뷰 구현 부분
-
         mRecyclerView = findViewById(R.id.recycler_v) ;
         mRecyclerView.setHasFixedSize(true); // 리사이클러뷰 기존 성능 강화
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this)); // 리사이클러뷰에 LinearLayoutManager 지정. (vertical)
@@ -125,33 +124,6 @@ public class MainActivity extends AppCompatActivity {
                 mRecyclerView.setAdapter(mAdapter);
             }
         });
-
-
-
-    /*
-        // 아이템 추가.
-        addItem("동화 축제",
-                "광진구", "5.4~5.6 (3일간)") ;
-        // 두 번째 아이템 추가.
-        addItem("관악 강감찬축제",
-                "관악구", "10.16~10.18 (3일간)") ;
-        // 세 번째 아이템 추가.
-        addItem("2020 이태원 지구촌 축제",
-                "용산구", "10월중") ;
-
-        mAdapter.notifyDataSetChanged() ;*/
-
     }
-/*
-    public void addItem(String name, String location, String period) {
-        RecyclerItem item = new RecyclerItem();
-
-        item.setName(name);
-        item.setLocation(location);
-        item.setPeriod(period);
-
-        mList.add(item);
-    }
-*/
 }
 
