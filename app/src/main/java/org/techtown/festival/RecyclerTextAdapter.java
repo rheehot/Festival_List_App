@@ -1,5 +1,6 @@
 package org.techtown.festival;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapter.ViewHolder> {
     private ArrayList<RecyclerItem> mData;
+    public static final int REQUEST_CODE_MENU = 102;
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
     public RecyclerTextAdapter(ArrayList<RecyclerItem> list) {
@@ -73,13 +75,12 @@ public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapte
                         // 데이터 리스트로부터 아이템 데이터 참조
                         RecyclerItem item = mData.get(pos);
                         String ID = item.getId();
-                        Toast.makeText(v.getContext(), pos + "번째 ID : " + ID, Toast.LENGTH_SHORT).show();
-                        /*
-                        Intent intent = new Intent(v.getContext(), MainActivity.class);
-                        intent.putExtra("ID", ""+result.getId());
-                        startActivity(intent);*
+                        //Toast.makeText(v.getContext(), pos + "번째 ID : " + ID, Toast.LENGTH_SHORT).show();
 
-                         */
+                        // 정보 액티비티로 ID를 가지고 넘어간다.
+                        Intent intent = new Intent(v.getContext(), InformationActivity.class);
+                        intent.putExtra("ID", ""+ID);
+                        v.getContext().startActivity(intent);
                     }
                 }
             });
