@@ -1,19 +1,20 @@
 package org.techtown.festival;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapter.ViewHolder> {
-    private ArrayList<RecyclerItem> mData = null ;
+    private ArrayList<RecyclerItem> mData;
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
     public RecyclerTextAdapter(ArrayList<RecyclerItem> list) {
@@ -34,7 +35,7 @@ public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapte
 
     // onBindViewHolder() - position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
     @Override
-    public void onBindViewHolder(RecyclerTextAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
         RecyclerItem item = mData.get(position) ;
 
@@ -62,6 +63,26 @@ public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapte
             name = itemView.findViewById(R.id.name_tv) ;
             location = itemView.findViewById(R.id.location_tv) ;
             period = itemView.findViewById(R.id.period_tv) ;
+
+            // 리사이클러뷰 클릭시 정보 액티비티로 넘어가게끔 구현
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    if(pos != RecyclerView.NO_POSITION) {
+                        // 데이터 리스트로부터 아이템 데이터 참조
+                        RecyclerItem item = mData.get(pos);
+                        String ID = item.getId();
+                        Toast.makeText(v.getContext(), pos + "번째 ID : " + ID, Toast.LENGTH_SHORT).show();
+                        /*
+                        Intent intent = new Intent(v.getContext(), MainActivity.class);
+                        intent.putExtra("ID", ""+result.getId());
+                        startActivity(intent);*
+
+                         */
+                    }
+                }
+            });
         }
     }
 }
