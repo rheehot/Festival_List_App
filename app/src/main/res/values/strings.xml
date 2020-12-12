@@ -4,6 +4,7 @@
     <string name="time">축제 기간</string>
     <string name="location">시도명</string>
     <string name="name">축제 이름</string>
+    <string name="information">정보</string>
 
     <string-array name="region">
         <item>서울</item>

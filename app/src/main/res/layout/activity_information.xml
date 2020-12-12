@@ -29,27 +29,10 @@
             android:text="돌아가기" />
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/content_Scrollview"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/information_recycler"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="15dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/content_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="○ 크리스마스 콘서트\n○ 크리스마스 거리가게(마켓, 체험부스)운영\n○ 개막식 및 오프닝 축하공연\n○ 키즈존, 포토존 등 이벤트 운영"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-    </ScrollView>
-
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>
