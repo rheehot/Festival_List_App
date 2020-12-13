@@ -4,168 +4,258 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EF8AAD"
+    android:background="#9E8742"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/layout1"
+    <LinearLayout
+        android:background="@drawable/brownround"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.15">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
+            android:layout_weight="0.15"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="0dp">
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <Spinner
-                    android:layout_marginVertical="20dp"
-                    android:id="@+id/spinner_rg"
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_margin="30dp"
+                    android:background="@drawable/leaf"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_weight="0.65"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/layout1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/spinner_bnt"
-                    android:spinnerMode="dialog"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp" >
-                </Spinner>
+                    android:layout_height="0dp"
+                    android:layout_weight="0.15">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <Spinner
+                                android:layout_marginVertical="20dp"
+                                android:id="@+id/spinner_rg"
+                                android:layout_width="140dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/spinner_bnt"
+                                android:spinnerMode="dialog"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp" >
+                            </Spinner>
 
 
 
-            </RelativeLayout>
+                        </RelativeLayout>
 
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2">
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7">
+
+                            <Button
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/complete"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/myout"
+                                android:text="찾기"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1">
+
+                    <LinearLayout
+                        android:id="@+id/back_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/name_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3">
+
+                            <TextView
+                                android:fontFamily="@font/bazzi"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:text="@string/name"/>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3">
+
+                            <TextView
+                                android:fontFamily="@font/bazzi"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:text="@string/location"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4">
+
+                            <TextView
+                                android:fontFamily="@font/bazzi"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:text="@string/time"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75">
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_v"
+                        android:layout_width="match_parent"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/bazzi"
+                        android:layout_height="match_parent">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <Button
-                    android:layout_centerInParent="true"
-                    android:id="@+id/complete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:background="#FFC107"
-                    android:text="@string/check"
-                    android:padding="10dp"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:id="@+id/go_review"
+                    android:background="@mipmap/red_foreground"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
 
-
-            </RelativeLayout>
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1">
-
-        <LinearLayout
-            android:id="@+id/back_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:id="@+id/name_layout"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.3">
+                </Button>
 
                 <TextView
-                    android:id="@+id/subjectNameTv"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:text="@string/name"/>
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
 
+                </TextView>
 
-            </RelativeLayout>
+                <Button
+                    android:id="@+id/go_mypage"
+                    android:background="@mipmap/mountain_foreground"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.3">
+                </Button>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:text="@string/location"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:text="@string/time"/>
-
-            </RelativeLayout>
-
-
-
-        </LinearLayout>
-
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.75">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_v"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/go_mypage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="마이페이지" />
-
-        <Button
-            android:id="@+id/go_review"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="후기 게시판" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 

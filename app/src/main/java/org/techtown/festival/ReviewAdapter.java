@@ -8,23 +8,35 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 // 리사이클러뷰 어뎁터 코드
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
 
+    private List<Review> mReviewList;
+
+    public ReviewAdapter(List<Review> mReviewList){
+        this.mReviewList = mReviewList;
+    }
+    /*
     private String[] re_name = {"김영한", "이수영", };
     private String[] re_star = {"4/5", "5/5", };
     private String[] re_content = {"유익한 내용", "삥빵뽕뿡삥뽕ssssssssssssssssssssssss", };
 
-    public class ViewHolder extends RecyclerView.ViewHolder { // 홀더 설정
-        public TextView r_name;
-        public TextView r_star;
-        public TextView r_content;
+     */
+
+    public static class ViewHolder extends RecyclerView.ViewHolder { // 홀더 설정
+        public TextView mIdTextView;
+        public TextView mTitleTextView;
+        public TextView mStarTextView;
+        public TextView mContextTextView;
 
         public ViewHolder(View view) {
             super(view);
-            this.r_name = view.findViewById(R.id.r_name);
-            this.r_star = view.findViewById(R.id.r_star);
-            this.r_content = view.findViewById(R.id.r_content);
+            this.mIdTextView = view.findViewById(R.id.r_id);
+            this.mTitleTextView = view.findViewById(R.id.r_title);
+            this.mStarTextView = view.findViewById(R.id.r_star);
+            this.mContextTextView = view.findViewById(R.id.r_content);
         }
     }
 
@@ -37,14 +49,16 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ReviewAdapter.ViewHolder holder, final int position) { // position에 맞는 데이터를 이용해 리스트를 채운다.
-        holder.r_name.setText(re_name[position]);
-        holder.r_star.setText(re_star[position]);
-        holder.r_content.setText(re_content[position]);
+        Review data = mReviewList.get(position);
+        holder.mIdTextView.setText(data.getId());
+        holder.mTitleTextView.setText(data.getTitle());
+        holder.mStarTextView.setText(data.getStar());
+        holder.mContextTextView.setText(data.getContent());
         // 연결된 뷰들은 액션에 대한 실행을 지정할 수 있다.
     }
 
     @Override
     public int getItemCount() { // 리사이클러뷰의 데이터 개수를 리턴
-        return re_name.length;
+        return mReviewList.size();
     }
 }
