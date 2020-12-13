@@ -29,13 +29,16 @@
                     android:id="@+id/go_main2"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_margin="20dp"
+                    android:layout_margin="30dp"
                     android:layout_weight="1"
                     android:background="@drawable/reply">
 
                 </Button>
 
                 <Button
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/brownround"
+                    android:layout_marginHorizontal="50dp"
                     android:id="@+id/update_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -43,6 +46,9 @@
                     android:text="조회" />
 
                 <Button
+                    android:background="@drawable/brownround"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
                     android:id="@+id/write_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,17 +133,9 @@
                 </RelativeLayout>
 
 
-
-
-
             </LinearLayout>
         </RelativeLayout>
 
-
-
-
     </LinearLayout>
-
-
 
 </RelativeLayout>
