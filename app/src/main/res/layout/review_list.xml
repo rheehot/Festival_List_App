@@ -43,15 +43,6 @@
             android:gravity="center" />
 
 
-        <TextView
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:id="@+id/r_star"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="별점" />
-
     </LinearLayout>
 
     <LinearLayout

@@ -13,9 +13,9 @@
 
         <EditText
             android:id="@+id/id_etx"
-            android:hint="id"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:hint="축제이름">
 
         </EditText>
 
@@ -39,9 +39,9 @@
 
         <EditText
             android:id="@+id/rating_etx"
-            android:hint="rating"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:hint="내용">
 
         </EditText>
 

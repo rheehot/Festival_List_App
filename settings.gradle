@@ -1,5 +1,2 @@
-include ':poi-ooxml-schemas-4.1.2'
-include ':poi-ooxml-4.1.2'
-include ':poi-4.1.2'
 include ':app'
 rootProject.name = "Festival"

@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapter.ViewHolder> {
     private ArrayList<RecyclerItem> mData;
-    public static final int REQUEST_CODE_MENU = 102;
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
     public RecyclerTextAdapter(ArrayList<RecyclerItem> list) {

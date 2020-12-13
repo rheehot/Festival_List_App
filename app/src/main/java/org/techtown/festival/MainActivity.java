@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent review_intent = new Intent(getApplicationContext(), ReviewActivity.class);
                 review_intent.putExtra("USERID", ""+id); // ID 보내주기
                 startActivityForResult(review_intent, REQUEST_CODE_MENU);
+                //startActivity(review_intent);
             }
         });
 
