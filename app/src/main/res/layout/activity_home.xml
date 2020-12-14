@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E8742"
+    android:orientation="vertical">
+
+
+   <LinearLayout
+       android:background="@drawable/round"
+       android:layout_margin="20dp"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:layout_weight="0.2"
+           android:layout_width="match_parent"
+           android:layout_height="0dp">
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:paddingLeft="20dp"
+                   android:layout_weight="2"
+                   android:textColor="#5C3905"
+                   android:fontFamily="@font/bazzi"
+                   android:gravity="center"
+                   android:textSize="35sp"
+                   android:text="Welcome "
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent">
+
+               </TextView>
+
+               <ImageView
+                   android:layout_weight="1"
+                   android:layout_marginVertical="30dp"
+                   android:background="@mipmap/fireworks_foreground"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent">
+
+               </ImageView>
+
+               <TextView
+                   android:paddingRight="20dp"
+                   android:layout_weight="2"
+                   android:textColor="#5C3905"
+                   android:fontFamily="@font/bazzi"
+                   android:gravity="center"
+                   android:textSize="35sp"
+                   android:text="Festival "
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent">
+
+               </TextView>
+
+           </LinearLayout>
+
+
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:background="@drawable/map"
+           android:layout_weight="0.8"
+           android:layout_width="match_parent"
+           android:layout_height="0dp">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:id="@+id/textView17"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="26dp"
+                   android:layout_marginLeft="26dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                   android:text="Gyeongnam"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView5"
+                   app:layout_constraintEnd_toStartOf="@+id/textView4"
+                   app:layout_constraintStart_toEndOf="@+id/textView6"
+                   app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+               <TextView
+                   android:id="@+id/seoul_tx"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="111dp"
+                   android:layout_marginLeft="111dp"
+                   android:layout_marginTop="4dp"
+                   android:layout_marginEnd="67dp"
+                   android:layout_marginRight="67dp"
+                   android:text="seoul"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView3"
+                   app:layout_constraintEnd_toStartOf="@+id/textView9"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+               <TextView
+                   android:id="@+id/textView3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="526dp"
+                   android:text="Incheon"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@+id/textView17"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="80dp"
+                   android:layout_marginEnd="38dp"
+                   android:layout_marginRight="38dp"
+                   android:layout_marginBottom="13dp"
+                   android:text="Ulsan"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView5"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/textView17"
+                   app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+               <TextView
+                   android:id="@+id/textView5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="154dp"
+                   android:layout_marginLeft="154dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginEnd="72dp"
+                   android:layout_marginRight="72dp"
+                   android:layout_marginBottom="58dp"
+                   android:text="Busan"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.0"
+                   app:layout_constraintStart_toEndOf="@+id/textView15"
+                   app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+               <TextView
+                   android:id="@+id/textView6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginTop="73dp"
+                   android:layout_marginEnd="4dp"
+                   android:layout_marginRight="4dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Gwangju"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView14"
+                   app:layout_constraintEnd_toStartOf="@+id/textView16"
+                   app:layout_constraintStart_toEndOf="@+id/textView13"
+                   app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+               <TextView
+                   android:id="@+id/textView7"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="122dp"
+                   android:layout_marginLeft="122dp"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginEnd="33dp"
+                   android:layout_marginRight="33dp"
+                   android:layout_marginBottom="34dp"
+                   android:text="Daejeon"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView13"
+                   app:layout_constraintEnd_toStartOf="@+id/textView11"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+               <TextView
+                   android:id="@+id/textView8"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="3dp"
+                   android:layout_marginLeft="3dp"
+                   android:layout_marginTop="2dp"
+                   android:layout_marginEnd="34dp"
+                   android:layout_marginRight="34dp"
+                   android:layout_marginBottom="2dp"
+                   android:text="Sejong"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView7"
+                   app:layout_constraintEnd_toStartOf="@+id/textView11"
+                   app:layout_constraintStart_toEndOf="@+id/textView12"
+                   app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+               <TextView
+                   android:id="@+id/textView9"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginLeft="32dp"
+                   android:layout_marginTop="87dp"
+                   android:layout_marginEnd="70dp"
+                   android:layout_marginRight="70dp"
+                   android:layout_marginBottom="55dp"
+                   android:text=" Gangwon"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView10"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/textView18"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/textView10"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="43dp"
+                   android:layout_marginLeft="43dp"
+                   android:layout_marginTop="55dp"
+                   android:layout_marginEnd="107dp"
+                   android:layout_marginRight="107dp"
+                   android:layout_marginBottom="2dp"
+                   android:text="Chungbuk"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView8"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/textView12"
+                   app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+               <TextView
+                   android:id="@+id/textView11"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="31dp"
+                   android:layout_marginLeft="31dp"
+                   android:layout_marginTop="36dp"
+                   android:layout_marginEnd="35dp"
+                   android:layout_marginRight="35dp"
+                   android:layout_marginBottom="80dp"
+                   android:text="Gyeongbuk"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView4"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/textView8"
+                   app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+               <TextView
+                   android:id="@+id/textView12"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginTop="44dp"
+                   android:layout_marginEnd="7dp"
+                   android:layout_marginRight="7dp"
+                   android:layout_marginBottom="4dp"
+                   android:text="Chungnam"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView8"
+                   app:layout_constraintEnd_toStartOf="@+id/textView8"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+               <TextView
+                   android:id="@+id/textView13"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="34dp"
+                   android:layout_marginEnd="26dp"
+                   android:layout_marginRight="26dp"
+                   android:layout_marginBottom="24dp"
+                   android:text="Jeonbuk"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView6"
+                   app:layout_constraintEnd_toStartOf="@+id/textView16"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+               <TextView
+                   android:id="@+id/textView14"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="58dp"
+                   android:layout_marginLeft="58dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="99dp"
+                   android:layout_marginRight="99dp"
+                   android:layout_marginBottom="78dp"
+                   android:text="Jeonnam"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView15"
+                   app:layout_constraintEnd_toStartOf="@+id/textView5"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+               <TextView
+                   android:id="@+id/textView15"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Jeju"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.147"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+               <TextView
+                   android:id="@+id/textView16"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="26dp"
+                   android:layout_marginLeft="26dp"
+                   android:layout_marginTop="41dp"
+                   android:layout_marginEnd="98dp"
+                   android:layout_marginRight="98dp"
+                   android:layout_marginBottom="20dp"
+                   android:text="Dae-gu "
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@+id/textView17"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/textView13"
+                   app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+               <TextView
+                   android:id="@+id/textView18"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=" Gyeonggi"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   tools:layout_editor_absoluteX="49dp"
+                   tools:layout_editor_absoluteY="56dp" />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </RelativeLayout>
+
+   </LinearLayout>
+
+
+</LinearLayout>

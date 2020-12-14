@@ -1,5 +1,6 @@
 package org.techtown.festival;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,43 +9,60 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // 리사이클러뷰 어뎁터 코드
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder> {
+    private ArrayList<Review> mData;
 
-    private String[] re_name = {"김영한", "이수영", };
-    private String[] re_star = {"4/5", "5/5", };
-    private String[] re_content = {"유익한 내용", "삥빵뽕뿡삥뽕ssssssssssssssssssssssss", };
+    // 생성자에서 데이터 리스트 객체를 전달받음.
+    public ReviewAdapter(ArrayList<Review> list) {
+        mData = list ;
+    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder { // 홀더 설정
-        public TextView r_name;
-        public TextView r_star;
-        public TextView r_content;
+    // onCreateViewHolder() - 아이템 뷰를 위한 뷰홀더 객체 생성하여 리턴.
+    @Override
+    public ReviewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Context context = parent.getContext() ;
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
-        public ViewHolder(View view) {
-            super(view);
-            this.r_name = view.findViewById(R.id.r_name);
-            this.r_star = view.findViewById(R.id.r_star);
-            this.r_content = view.findViewById(R.id.r_content);
+        View view = inflater.inflate(R.layout.review_list, parent, false) ;
+        ReviewAdapter.ViewHolder vh = new ReviewAdapter.ViewHolder(view) ;
+
+        return vh ;
+    }
+
+    // onBindViewHolder() - position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
+    @Override
+    public void onBindViewHolder(ReviewAdapter.ViewHolder holder, int position) {
+
+        Review item = mData.get(position) ;
+
+        holder.id.setText(item.getId());
+        holder.title.setText(item.getTitle());
+        holder.content.setText(item.getContent());
+    }
+
+    // getItemCount() - 전체 데이터 갯수 리턴.
+    @Override
+    public int getItemCount() {
+        return mData.size() ;
+    }
+
+    // 아이템 뷰를 저장하는 뷰홀더 클래스.
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView id ;
+        TextView title;
+        TextView content;
+
+        ViewHolder(View itemView) {
+            super(itemView) ;
+
+            // 뷰 객체에 대한 참조. (hold strong reference)
+            id = itemView.findViewById(R.id.r_id) ;
+            title = itemView.findViewById(R.id.r_title) ;
+            content = itemView.findViewById(R.id.r_content) ;
         }
-    }
-
-    @Override
-    public ReviewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) { // 레이아웃 매니저에 의해 새 아이템을 만들고 ViewHolder를 만들어준다.
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.review_list, parent, false); // 레이아웃 연결
-        ReviewAdapter.ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
-    }
-
-    @Override
-    public void onBindViewHolder(ReviewAdapter.ViewHolder holder, final int position) { // position에 맞는 데이터를 이용해 리스트를 채운다.
-        holder.r_name.setText(re_name[position]);
-        holder.r_star.setText(re_star[position]);
-        holder.r_content.setText(re_content[position]);
-        // 연결된 뷰들은 액션에 대한 실행을 지정할 수 있다.
-    }
-
-    @Override
-    public int getItemCount() { // 리사이클러뷰의 데이터 개수를 리턴
-        return re_name.length;
     }
 }

@@ -4,6 +4,7 @@ public class RecyclerItem {
     private String nameStr ;
     private String locationStr ;
     private String periodStr ;
+    private String idStr ;
 
     public void setName(String name) {
         nameStr = name ;
@@ -14,6 +15,9 @@ public class RecyclerItem {
     public void setPeriod(String period) {
         periodStr = period ;
     }
+    public void setId(String ID) {
+        idStr = ID ;
+    }
 
     public String getName() {
         return this.nameStr ;
@@ -23,6 +27,9 @@ public class RecyclerItem {
     }
     public String getPeriod() {
         return this.periodStr ;
+    }
+    public String getId() {
+        return this.idStr ;
     }
 }
 

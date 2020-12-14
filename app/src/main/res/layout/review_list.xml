@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="50dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp"
+    app:cardMaxElevation = "2dp"
+    app:cardPreventCornerOverlap = "true"
+    app:cardUseCompatPadding = "true"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:orientation="vertical"
+    android:background="@drawable/outline"
+    android:layout_height="110dp">
 
-    <TextView
-        android:id="@+id/r_name"
-        android:layout_width="80dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="이름" />
-
-    <TextView
-        android:id="@+id/r_star"
-        android:layout_width="80dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="별점" />
-
-    <TextView
-        android:id="@+id/r_content"
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="내용" />
+        android:layout_height="0dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/r_id"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="이름"
+            android:textSize="12sp"
+            android:drawableLeft="@drawable/ic_person"
+            app:drawableStartCompat="@drawable/ic_person" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:text="타이틀"
+            android:id="@+id/r_title"
+            android:layout_weight="2"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/r_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="내용" />
+
+    </LinearLayout>
+
+
 </LinearLayout>
