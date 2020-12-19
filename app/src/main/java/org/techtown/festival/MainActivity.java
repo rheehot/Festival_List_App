@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        // 로그인 인텐트 부분(코드 병합하고 MainActivity로 옮겨주기)
+        // Home 인텐트 부분
         Intent intent = getIntent();
-        final String id = intent.getStringExtra("ID"); // id가져오기
-        Toast.makeText(getApplicationContext(), id+" 로그인 성공!", Toast.LENGTH_SHORT).show();
+        final String id = intent.getStringExtra("USER_ID"); // id가져오기
+        int pos = intent.getIntExtra("INDEX", 0); // 스피너 index 가져오기
 
         // 마이페이지로 이동 인텐트
         Button btn_page = findViewById(R.id.go_mypage);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.region, android.R.layout.simple_spinner_dropdown_item);
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(monthAdapter);
-
+        spinner.setSelection(pos); // 스피너 default 값 설정
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
