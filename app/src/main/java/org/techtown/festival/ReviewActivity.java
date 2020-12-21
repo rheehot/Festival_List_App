@@ -67,7 +67,7 @@ public class ReviewActivity extends AppCompatActivity {
                     }
                 });
 
-                // 리사이클러뷰에 SimpleTextAdapter 객체 지정.
+                // 리사이클러뷰에 Adapter 객체 지정.
                 mAdapter = new Review_RecyclerAdapter(mList);
                 mRecyclerView.setAdapter(mAdapter);
             }

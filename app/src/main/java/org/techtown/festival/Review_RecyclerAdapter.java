@@ -57,7 +57,7 @@ public class Review_RecyclerAdapter extends RecyclerView.Adapter<Review_Recycler
         ViewHolder(View itemView) {
             super(itemView) ;
 
-            // 뷰 객체에 대한 참조. (hold strong reference)
+            // 뷰 객체에 대한 참조
             id = itemView.findViewById(R.id.r_id) ;
             title = itemView.findViewById(R.id.r_title) ;
             content = itemView.findViewById(R.id.r_content) ;
