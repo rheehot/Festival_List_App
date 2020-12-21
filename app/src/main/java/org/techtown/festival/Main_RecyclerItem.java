@@ -1,6 +1,6 @@
 package org.techtown.festival;
 
-public class RecyclerItem {
+public class Main_RecyclerItem {
     private String nameStr ;
     private String locationStr ;
     private String periodStr ;

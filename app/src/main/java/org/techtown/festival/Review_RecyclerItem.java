@@ -1,6 +1,6 @@
 package org.techtown.festival;
 
-public class Review {
+public class Review_RecyclerItem {
 
     private String idStr;
     private String titleStr;

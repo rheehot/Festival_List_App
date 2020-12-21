@@ -10,22 +10,22 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapter.ViewHolder> {
-    private ArrayList<RecyclerItem> mData;
+public class Main_RecyclerAdapter extends RecyclerView.Adapter<Main_RecyclerAdapter.ViewHolder> {
+    private ArrayList<Main_RecyclerItem> mData;
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
-    public RecyclerTextAdapter(ArrayList<RecyclerItem> list) {
+    public Main_RecyclerAdapter(ArrayList<Main_RecyclerItem> list) {
         mData = list ;
     }
 
     // onCreateViewHolder() - 아이템 뷰를 위한 뷰홀더 객체 생성하여 리턴.
     @Override
-    public RecyclerTextAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public Main_RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
         View view = inflater.inflate(R.layout.recyclerview_item, parent, false) ;
-        RecyclerTextAdapter.ViewHolder vh = new RecyclerTextAdapter.ViewHolder(view) ;
+        Main_RecyclerAdapter.ViewHolder vh = new Main_RecyclerAdapter.ViewHolder(view) ;
 
         return vh ;
     }
@@ -34,7 +34,7 @@ public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        RecyclerItem item = mData.get(position) ;
+        Main_RecyclerItem item = mData.get(position) ;
 
         holder.name.setText(item.getName()); ;
         holder.location.setText(item.getLocation()) ;
@@ -68,7 +68,7 @@ public class RecyclerTextAdapter extends RecyclerView.Adapter<RecyclerTextAdapte
                     int pos = getAdapterPosition();
                     if(pos != RecyclerView.NO_POSITION) {
                         // 데이터 리스트로부터 아이템 데이터 참조
-                        RecyclerItem item = mData.get(pos);
+                        Main_RecyclerItem item = mData.get(pos);
                         String ID = item.getId();
                         //Toast.makeText(v.getContext(), pos + "번째 ID : " + ID, Toast.LENGTH_SHORT).show();
 
