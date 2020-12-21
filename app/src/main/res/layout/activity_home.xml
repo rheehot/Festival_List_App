@@ -8,335 +8,371 @@
     android:orientation="vertical">
 
 
-   <LinearLayout
-       android:background="@drawable/round"
-       android:layout_margin="20dp"
-       android:orientation="vertical"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@drawable/round"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-       <RelativeLayout
-           android:layout_weight="0.2"
-           android:layout_width="match_parent"
-           android:layout_height="0dp">
+        <RelativeLayout
+            android:layout_weight="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
 
-           <LinearLayout
-               android:orientation="horizontal"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-               <TextView
-                   android:paddingLeft="20dp"
-                   android:layout_weight="2"
-                   android:textColor="#5C3905"
-                   android:fontFamily="@font/bazzi"
-                   android:gravity="center"
-                   android:textSize="35sp"
-                   android:text="Welcome "
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent">
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_weight="2"
+                    android:textColor="#5C3905"
+                    android:fontFamily="@font/bazzi"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="Welcome "
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
 
-               </TextView>
+                </TextView>
 
-               <ImageView
-                   android:layout_weight="1"
-                   android:layout_marginVertical="30dp"
-                   android:background="@mipmap/fireworks_foreground"
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent">
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_marginVertical="30dp"
+                    android:background="@mipmap/fireworks_foreground"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
 
-               </ImageView>
+                </ImageView>
 
-               <TextView
-                   android:paddingRight="20dp"
-                   android:layout_weight="2"
-                   android:textColor="#5C3905"
-                   android:fontFamily="@font/bazzi"
-                   android:gravity="center"
-                   android:textSize="35sp"
-                   android:text="Festival "
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent">
+                <TextView
+                    android:paddingRight="20dp"
+                    android:layout_weight="2"
+                    android:textColor="#5C3905"
+                    android:fontFamily="@font/bazzi"
+                    android:gravity="center"
+                    android:textSize="35sp"
+                    android:text="Festival "
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
 
-               </TextView>
+                </TextView>
 
-           </LinearLayout>
+            </LinearLayout>
 
 
-       </RelativeLayout>
+        </RelativeLayout>
 
-       <RelativeLayout
-           android:background="@drawable/map"
-           android:layout_weight="0.8"
-           android:layout_width="match_parent"
-           android:layout_height="0dp">
+        <RelativeLayout
+            android:background="@drawable/map"
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
 
-           <androidx.constraintlayout.widget.ConstraintLayout
-               android:layout_width="match_parent"
-               android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-               <TextView
-                   android:id="@+id/tv_Gyeongnam"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="26dp"
-                   android:layout_marginLeft="26dp"
-                   android:layout_marginTop="5dp"
-                   android:layout_marginBottom="5dp"
-                   android:text="Gyeongnam"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Busan"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Ulsan"
-                   app:layout_constraintStart_toEndOf="@+id/tv_Gwangju"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Jeonbuk" />
+                <TextView
+                    android:id="@+id/tv_Gyeongnam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="29dp"
+                    android:layout_marginRight="29dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Gyeongnam"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Busan"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Ulsan"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Gwangju"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Daegu" />
 
-               <TextView
-                   android:id="@+id/tv_seoul"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="111dp"
-                   android:layout_marginLeft="111dp"
-                   android:layout_marginTop="4dp"
-                   android:layout_marginEnd="67dp"
-                   android:layout_marginRight="67dp"
-                   android:text="seoul"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Incheon"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Gangwon"
-                   app:layout_constraintHorizontal_bias="0.0"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Gyeonggi"
-                   app:layout_constraintVertical_bias="0.813" />
+                <TextView
+                    android:id="@+id/tv_seoul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginEnd="216dp"
+                    android:layout_marginRight="216dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="seoul"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Chungbuk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Incheon"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Gyeonggi" />
 
-               <TextView
-                   android:id="@+id/tv_Incheon"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="104dp"
-                   android:layout_marginEnd="84dp"
-                   android:layout_marginRight="84dp"
-                   android:text="Incheon"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Gyeongnam"
-                   app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tv_Incheon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="48dp"
+                    android:text="Incheon"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Chungnam"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_seoul"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Gyeonggi" />
 
-               <TextView
-                   android:id="@+id/tv_Ulsan"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginEnd="38dp"
-                   android:layout_marginRight="38dp"
-                   android:layout_marginBottom="40dp"
-                   android:text="Ulsan"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Busan"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintStart_toEndOf="@+id/tv_Gyeongnam" />
+                <TextView
+                    android:id="@+id/tv_Ulsan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="206dp"
+                    android:text="Ulsan"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Gyeongnam"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Gyeongbuk" />
 
-               <TextView
-                   android:id="@+id/tv_Busan"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="154dp"
-                   android:layout_marginLeft="154dp"
-                   android:layout_marginEnd="72dp"
-                   android:layout_marginRight="72dp"
-                   android:layout_marginBottom="132dp"
-                   android:text="Busan"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toBottomOf="parent"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintHorizontal_bias="1.0"
-                   app:layout_constraintStart_toEndOf="@+id/tv_Jeju" />
+                <TextView
+                    android:id="@+id/tv_Busan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="106dp"
+                    android:layout_marginLeft="106dp"
+                    android:layout_marginEnd="86dp"
+                    android:layout_marginRight="86dp"
+                    android:layout_marginBottom="162dp"
+                    android:text="Busan"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Gwangju"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Gyeongnam" />
 
-               <TextView
-                   android:id="@+id/tv_Gwangju"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="73dp"
-                   android:layout_marginEnd="56dp"
-                   android:layout_marginRight="56dp"
-                   android:layout_marginBottom="8dp"
-                   android:text="Gwangju"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Jeonnam"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Daegu"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Daejeon" />
+                <TextView
+                    android:id="@+id/tv_Gwangju"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Gwangju"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Jeonnam"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Jeonnam"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Jeonbuk" />
 
-               <TextView
-                   android:id="@+id/tv_Daejeon"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="15dp"
-                   android:text="Daejeon"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Sejong"
-                   tools:layout_editor_absoluteX="120dp" />
+                <TextView
+                    android:id="@+id/tv_Daejeon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Daejeon"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Daegu"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Gyeongbuk"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Sejong"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Sejong" />
 
-               <TextView
-                   android:id="@+id/tv_Sejong"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="3dp"
-                   android:layout_marginLeft="3dp"
-                   android:layout_marginEnd="34dp"
-                   android:layout_marginRight="34dp"
-                   android:layout_marginBottom="2dp"
-                   android:text="Sejong"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Daejeon"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Gyeongbuk"
-                   app:layout_constraintStart_toEndOf="@+id/tv_Chungnam" />
+                <TextView
+                    android:id="@+id/tv_Sejong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Sejong"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Daejeon"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Chungbuk"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Chungnam"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Chungbuk" />
 
-               <TextView
-                   android:id="@+id/tv_Gangwon"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="32dp"
-                   android:layout_marginLeft="32dp"
-                   android:layout_marginTop="87dp"
-                   android:layout_marginEnd="70dp"
-                   android:layout_marginRight="70dp"
-                   android:layout_marginBottom="55dp"
-                   android:text=" Gangwon"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Chungbuk"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintStart_toEndOf="@+id/tv_Gyeonggi"
-                   app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tv_Gangwon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="77dp"
+                    android:layout_marginEnd="66dp"
+                    android:layout_marginRight="66dp"
+                    android:layout_marginBottom="55dp"
+                    android:text=" Gangwon"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Chungbuk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Gyeonggi"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-               <TextView
-                   android:id="@+id/tv_Chungbuk"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginEnd="107dp"
-                   android:layout_marginRight="107dp"
-                   android:layout_marginBottom="2dp"
-                   android:text="Chungbuk"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Sejong"
-                   app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:id="@+id/tv_Chungbuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginEnd="127dp"
+                    android:layout_marginRight="127dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Chungbuk"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Sejong"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Chungnam"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Gangwon" />
 
-               <TextView
-                   android:id="@+id/tv_Gyeongbuk"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="31dp"
-                   android:layout_marginLeft="31dp"
-                   android:layout_marginTop="36dp"
-                   android:layout_marginEnd="35dp"
-                   android:layout_marginRight="35dp"
-                   android:layout_marginBottom="80dp"
-                   android:text="Gyeongbuk"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Ulsan"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintStart_toEndOf="@+id/tv_Sejong"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Chungbuk" />
+                <TextView
+                    android:id="@+id/tv_Gyeongbuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="233dp"
+                    android:layout_marginLeft="233dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="80dp"
+                    android:text="Gyeongbuk"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Ulsan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Chungbuk" />
 
-               <TextView
-                   android:id="@+id/tv_Chungnam"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="30dp"
-                   android:layout_marginLeft="30dp"
-                   android:layout_marginTop="44dp"
-                   android:layout_marginEnd="7dp"
-                   android:layout_marginRight="7dp"
-                   android:layout_marginBottom="4dp"
-                   android:text="Chungnam"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Sejong"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Sejong"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Incheon"
-                   app:layout_constraintVertical_bias="1.0" />
+                <TextView
+                    android:id="@+id/tv_Chungnam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="31dp"
+                    android:text="Chungnam"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Jeonbuk"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Sejong"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Incheon" />
 
-               <TextView
-                   android:id="@+id/tv_Jeonbuk"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="4dp"
-                   android:layout_marginEnd="26dp"
-                   android:layout_marginRight="26dp"
-                   android:text="Jeonbuk"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Daegu"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Daejeon" />
+                <TextView
+                    android:id="@+id/tv_Jeonbuk"
+                    android:layout_width="94dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="47dp"
+                    android:layout_marginRight="47dp"
+                    android:text="Jeonbuk"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Gwangju"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Daegu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Daejeon" />
 
-               <TextView
-                   android:id="@+id/tv_Jeonnam"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginStart="58dp"
-                   android:layout_marginLeft="58dp"
-                   android:layout_marginTop="8dp"
-                   android:layout_marginEnd="99dp"
-                   android:layout_marginRight="99dp"
-                   android:layout_marginBottom="78dp"
-                   android:text="Jeonnam"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Jeju"
-                   app:layout_constraintEnd_toStartOf="@+id/tv_Busan"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Gwangju" />
+                <TextView
+                    android:id="@+id/tv_Jeonnam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="238dp"
+                    android:layout_marginRight="238dp"
+                    android:layout_marginBottom="69dp"
+                    android:text="Jeonnam"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Jeju"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Gwangju"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Gwangju" />
 
-               <TextView
-                   android:id="@+id/tv_Jeju"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Jeju"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toBottomOf="parent"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintHorizontal_bias="0.147"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/tv_Jeonnam" />
+                <TextView
+                    android:id="@+id/tv_Jeju"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="69dp"
+                    android:layout_marginEnd="285dp"
+                    android:layout_marginRight="285dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Jeju"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Jeonnam" />
 
-               <TextView
-                   android:id="@+id/tv_Daegu"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginEnd="98dp"
-                   android:layout_marginRight="98dp"
-                   android:layout_marginBottom="20dp"
-                   android:text="Dae-gu "
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   app:layout_constraintBottom_toTopOf="@+id/tv_Gyeongnam"
-                   app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:id="@+id/tv_Daegu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="103dp"
+                    android:layout_marginRight="103dp"
+                    android:layout_marginBottom="9dp"
+                    android:text="Dae-gu "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_Gyeongnam"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_Jeonbuk"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Daejeon" />
 
-               <TextView
-                   android:id="@+id/tv_Gyeonggi"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text=" Gyeonggi"
-                   android:textSize="20sp"
-                   android:textStyle="bold"
-                   tools:layout_editor_absoluteX="68dp"
-                   tools:layout_editor_absoluteY="132dp"
-                   tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_Gyeonggi"
+                    android:layout_width="102dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text=" Gyeonggi"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_seoul"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_Gangwon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-           </androidx.constraintlayout.widget.ConstraintLayout>
-       </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
-   </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
