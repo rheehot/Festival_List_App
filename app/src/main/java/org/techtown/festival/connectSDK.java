@@ -56,7 +56,7 @@ public class connectSDK extends Application {
 
                 @Override
                 public boolean isSaveFormData() { // 빼먹으면 오류남
-                    // kakao SDK에서 사용되는 Webview에서 email 입력폼의 데이터를 저장할지 여부를 결정정
+                    // kakao SDK에서 사용되는 Webview에서 email 입력폼의 데이터를 저장할지 여부를 결정
                    return true;
                 }
             };
