@@ -56,7 +56,7 @@ public class Main_RecyclerAdapter extends RecyclerView.Adapter<Main_RecyclerAdap
         ViewHolder(View itemView) {
             super(itemView) ;
 
-            // 뷰 객체에 대한 참조. (hold strong reference)
+            // 뷰 객체에 대한 참조
             name = itemView.findViewById(R.id.name_tv) ;
             location = itemView.findViewById(R.id.location_tv) ;
             period = itemView.findViewById(R.id.period_tv) ;

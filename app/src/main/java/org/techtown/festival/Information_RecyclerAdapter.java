@@ -52,7 +52,7 @@ public class Information_RecyclerAdapter extends RecyclerView.Adapter<Informatio
         ViewHolder(View itemView) {
             super(itemView) ;
 
-            // 뷰 객체에 대한 참조. (hold strong reference)
+            // 뷰 객체에 대한 참조
             information = itemView.findViewById(R.id.information_tv) ;
         }
     }
