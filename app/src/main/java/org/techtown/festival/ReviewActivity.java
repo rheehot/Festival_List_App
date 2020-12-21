@@ -1,6 +1,5 @@
 package org.techtown.festival;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,8 +22,8 @@ import androidx.recyclerview.widget.RecyclerView;
 // 세부 정보 코드
 public class ReviewActivity extends AppCompatActivity {
     RecyclerView mRecyclerView = null ;
-    ReviewAdapter mAdapter = null ;
-    ArrayList<Review> mList = new ArrayList<Review>(); // 객체를 담을 어레이 리스트(어댑터 쪽으로)
+    Review_RecyclerAdapter mAdapter = null ;
+    ArrayList<Review_RecyclerItem> mList = new ArrayList<Review_RecyclerItem>(); // 객체를 담을 어레이 리스트(어댑터 쪽으로)
 
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
@@ -55,7 +54,7 @@ public class ReviewActivity extends AppCompatActivity {
                         // firebase 데이터베이스의 데이터를 받아오는 곳
                         mList.clear(); // 기존 배열리스트가 존재하지않게 초기화
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) { // 반복문으로 데이터 List를 추출해냄
-                            Review info = snapshot.getValue(Review.class); // 만들어뒀던 객체에 데이터를 담는다.
+                            Review_RecyclerItem info = snapshot.getValue(Review_RecyclerItem.class); // 만들어뒀던 객체에 데이터를 담는다.
                             mList.add(info); // 담은 데이터들을 배열리스트에 넣고 리사이클러뷰로 보낼 준비
                         }
                         mAdapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침
@@ -69,7 +68,7 @@ public class ReviewActivity extends AppCompatActivity {
                 });
 
                 // 리사이클러뷰에 SimpleTextAdapter 객체 지정.
-                mAdapter = new ReviewAdapter(mList);
+                mAdapter = new Review_RecyclerAdapter(mList);
                 mRecyclerView.setAdapter(mAdapter);
             }
         });

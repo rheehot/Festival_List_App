@@ -44,7 +44,7 @@ public class LoginActivity extends Activity {
                 @Override
                 public void onSuccess(MeV2Response result) {
                     // Intent intent = new Intent(getApplicationContext(), InformationActivity.class); // 나중에 병합하고 MainActivity로 수정
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                     intent.putExtra("ID", ""+result.getId());
                     startActivity(intent);
                     finish();
@@ -79,7 +79,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        // 카카오톡|스토리 간편로그인 실행 결과를 받아서 SDK로 전달
+        // 실행 결과를 받아서 SDK로 전달
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
         }
