@@ -62,6 +62,7 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Intent intent = getIntent(); // Splash에서 받기
 
         // 세션 콜백 등록
         Session.getCurrentSession().addCallback(sessionCallback);
