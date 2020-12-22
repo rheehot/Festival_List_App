@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(getApplicationContext(), " 로그인 성공!", Toast.LENGTH_SHORT).show();
 
 
-        // 메인으로 이동 인텐트 (클릭 뷰 이름 바꿔줘)
+        // 메인으로 이동 인텐트
         view_list[0] = findViewById(R.id.tv_seoul);
         view_list[1] = findViewById(R.id.tv_Busan);
         view_list[2] = findViewById(R.id.tv_Daegu);
